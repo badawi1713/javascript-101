@@ -1,6 +1,6 @@
 # Catatan Belajar JavaScript
 
-Getting Started (22/05/2022)
+Getting Started (22/05/2022) - Target Selesai (18/06/2022)*
 
 Beberapa resource untuk materi dasar dari MDN:
 
