@@ -42,7 +42,7 @@ Cara penamaan variabel yang standar
 
 - Menggunakan bahasa Inggris
 - Penulisannya menggunakan 'camelCase'
-- Tidak diperboleh diawali dengan angka, simbol selain _ dan $
+- Tidak diperboleh diawali dengan angka, simbol selain \_ dan $
 - Keywords yang digunakan dalam Javascript tidak boleh digunakan sebagai nama variabel, seperti let, var, dan lainnya
 
 Operator
@@ -51,19 +51,25 @@ Merupakan fitur atau sintaks yang digunakan untuk memanipulasi nilai, umumnya te
 
 - Penjumlahan (+)
 - Pengurangan (-)
-- Perkalian (*)
+- Perkalian (\*)
 - Pembagian (/)
 - Modulus/sisa (%)
-- Pangkat (**)
+- Pangkat (\*\*)
 - Assignment (=)
+- Menghitung dan menerapkan hasil pada variabel (+=, -=, \*=, /=)
 
 Tipe data Primitif pada Javascript:
 
 - Numbers = 2, -3 (decimal: integer), 22.112 (float),
 - Strings (Teks) = "Hello", 'Hello', \`Hello`
 - Null
-- Boolearn
+- Booleans = true/false, 0/1
 - Undefined
+
+Tipe data Moderen pada Javascript:
+
+- Objects = {"key": "value"}
+- Arrays = ["value", 1, 0, true, object, 200, null]
 
 Template Literals, atau melakukan concat pada nilai string
 
@@ -87,13 +93,54 @@ Fungsi bisa memiliki parameter sebagai input (bersifat optional) dan dapat menge
 Penulisan fungsi:
 // judul fungsi
 function namaFungsi(params) {
-    // badan fungsi
+// badan fungsi
 }
 
 Pemanggilan fungsi:
 namaFungsi(args)
 
 Variabel bayangan / shadow variabel merupakan variable lokal yang dideklarasikan secara global, namun juga bisa dideklarasikan secara block di dalam sebuah fungsi
+
+Konversi tipe data (23/05/2022)
+
+Segala sesuatu yang diinputkan, pada JavaScript akan selalu dikonversikan dalam bentuk String
+
+Cara konversi string (angka) ke tipe Number:
+
+- parseInt
+- parseFloat
+- Number(string-angka)
+- Menambahkan operator +, contoh: +(string-angka)
+
+Cara konversi menjadi tipe String:
+
+- "string".toNumber()
+
+\* Sebaiknya memsiahkan variabel menjadi fungsi supaya tidak perlu berulang ulang mendeklarasikan hal yang sama
+
+Komentar pada kode JavaScript:
+
+- Satu baris : `// komentar kode`
+- Banyak baris : `/* komentar kode */`
+
+Cara menggunakan array:
+
+- definisi array = kumpulan data
+- contoh sederhana array; let fruits = ['apple', 'grape', 'banana']
+- cara mengakses nilai pada array menggunakan [indeks]; fruits[0] //apple (indeks selalu dimulai dari 0)
+- metode untuk menambahkan data ke array (push/unshift)
+- fruits.push('melon') // fruits apple,grape,banana,melon
+- fruits.unshift('melon') // fruits melon,apple,grape,banana
+
+Cara menggunakan object:
+
+- Object dapat digunakan untuk memudahkan pengelompokkan data
+- contoh object, let profile = {name: 'Dzaky', age: 25}
+- cara mengakses key untuk mendapatkan nilai pada key yang ada di-object bisa melalui cara; profile.name atau profile['name'] // 'dzaky'
+- metode untuk menambahkan key baru pada object bisa melalui cara:
+- profile.height = 5.7 // {name: 'Dzaky', age: 25, height: 5.7}
+- profile['height'] = 5.7 // {name: 'Dzaky', age: 25, height: 5.7}
+- profile = {...profile, newKey: value}
 
 ## 02. Percabangan, Perulangan, dan Mengatasi Error (TBA)
 
