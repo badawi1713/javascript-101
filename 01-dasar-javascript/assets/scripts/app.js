@@ -20,6 +20,22 @@ function createAndWriteOutput(
   userInput.focus();
 }
 
+function writeToLog(
+  operationIdentifier,
+  prevResult,
+  operationNumber,
+  newResult
+) {
+  const logEntry = {
+    operation: operationIdentifier,
+    prevResult: +prevResult,
+    number: operationNumber,
+    result: newResult,
+  };
+  logEntries.push(logEntry);
+  console.log(logEntries);
+}
+
 function add() {
   // local/block scope, only works inside of this func
   //   const result = num1 + num2;
@@ -29,12 +45,12 @@ function add() {
   currentResult += enteredNumber;
   createAndWriteOutput("+", initialResult, enteredNumber);
   //   return result;
-  const logEntry = {
-    operation: "ADD",
-    prevResult: +initialResult,
-    number: enteredNumber,
-    result: currentResult,
-  };
+  const logEntry = writeToLog(
+    "ADD",
+    initialResult,
+    enteredNumber,
+    currentResult
+  );
   // metode array untuk memasukkan data terbaru dari indeks terakhir
   logEntries.push(logEntry);
   console.log(logEntries);
@@ -45,6 +61,8 @@ function subtract() {
   const initialResult = currentResult;
   currentResult -= enteredNumber;
   createAndWriteOutput("-", initialResult, enteredNumber);
+  writeToLog("SUBTRACT", initialResult, enteredNumber, currentResult);
+  // metode array untuk memasukkan data terbaru dari indeks terakhir
 }
 
 function multiply() {
@@ -52,6 +70,8 @@ function multiply() {
   const initialResult = currentResult;
   currentResult *= enteredNumber;
   createAndWriteOutput("*", initialResult, enteredNumber);
+  writeToLog("MULTIPLY", initialResult, enteredNumber, currentResult);
+  // metode array untuk memasukkan data terbaru dari indeks terakhir
 }
 
 function divide() {
@@ -59,6 +79,8 @@ function divide() {
   const initialResult = currentResult;
   currentResult /= enteredNumber;
   createAndWriteOutput("/", initialResult, enteredNumber);
+  writeToLog("DIVIDE", initialResult, enteredNumber, currentResult);
+  // metode array untuk memasukkan data terbaru dari indeks terakhir
 }
 
 // taking as text not as a calculation

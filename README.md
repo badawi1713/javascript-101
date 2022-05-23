@@ -57,14 +57,19 @@ Merupakan fitur atau sintaks yang digunakan untuk memanipulasi nilai, umumnya te
 - Pangkat (\*\*)
 - Assignment (=)
 - Menghitung dan menerapkan hasil pada variabel (+=, -=, \*=, /=)
+- Typeof operator digunakan untuk mengetahui tipe data dari variabel (typeof username || typeof 'dzaky') // string
+  typeof NaN // number
+  typeof [1,2,3] // object
 
 Tipe data Primitif pada Javascript:
 
 - Numbers = 2, -3 (decimal: integer), 22.112 (float),
 - Strings (Teks) = "Hello", 'Hello', \`Hello`
-- Null
+- null = bukan merupakan nilai default dari variabel, tetapi bisa di-assign ke dalam variabel sebagai nilai yang kosong/bersih
 - Booleans = true/false, 0/1
-- Undefined
+- undefined = nilai default dari variabel yang tanpa diinisialisasikan
+
+- NaN = Bukan salah satu tipe data primitif, tapi bagian dari tipe Number yang mana digunakan dalam perhitungan
 
 Tipe data Moderen pada Javascript:
 
@@ -141,6 +146,12 @@ Cara menggunakan object:
 - profile.height = 5.7 // {name: 'Dzaky', age: 25, height: 5.7}
 - profile['height'] = 5.7 // {name: 'Dzaky', age: 25, height: 5.7}
 - profile = {...profile, newKey: value}
+
+Mengimport script dengan baik secara 'defer' & 'async'
+
+- import script pada bagian `<Head>`
+- defer merupakan atribut pada tag script yang digunakan untuk memprioritaskan javascript di-load terlebih dahulu sebelum browser mem-parsing tampilan HTML. Defer dapat membuat script dapat diekseskusi setelah script didownload dan browser memparsing HTML, sehingga tidak menimbulkan error.
+- async digunakan untuk memuat script terlebih dahulu, tetapi dengan async, script bisa langsung dieksekusi setelah selesai di-download
 
 ## 02. Percabangan, Perulangan, dan Mengatasi Error (TBA)
 
