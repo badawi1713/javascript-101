@@ -121,7 +121,8 @@ Cara konversi menjadi tipe String:
 
 - "string".toNumber()
 
-\* Sebaiknya memsiahkan variabel menjadi fungsi supaya tidak perlu berulang ulang mendeklarasikan hal yang sama
+**Note**
+Sebaiknya memsiahkan variabel menjadi fungsi supaya tidak perlu berulang ulang mendeklarasikan hal yang sama
 
 Komentar pada kode JavaScript:
 
@@ -153,7 +154,51 @@ Mengimport script dengan baik secara 'defer' & 'async'
 - defer merupakan atribut pada tag script yang digunakan untuk memprioritaskan javascript di-load terlebih dahulu sebelum browser mem-parsing tampilan HTML. Defer dapat membuat script dapat diekseskusi setelah script didownload dan browser memparsing HTML, sehingga tidak menimbulkan error.
 - async digunakan untuk memuat script terlebih dahulu, tetapi dengan async, script bisa langsung dieksekusi setelah selesai di-download
 
-## 02. Percabangan, Perulangan, dan Mengatasi Error (TBA)
+## 02. Percabangan, Perulangan, dan Mengatasi Error (25/05/2022)
+
+Boolean operator:
+
+- (==) = untuk membandingkan kesamaan 2 nilai (jika sama; true, jika tidak; false)
+- (!=) = untuk membandingkan jika 2 nilai memang tidak sama
+- \*rekmondasi menggunakan ini (=== dan !==) = untuk membandingkan nilai dan juga tipe data yang digunakan
+- \*> & < untuk mengecek apakah nilai lebih besar / kecil (a > b / b < a)
+- > = & <= untuk mengecek apakah nilai lebih besar / kecil sama dengan
+- ! untuk mengecek apakah nilai tidak benar (!a)
+
+Penggunaan if else ... untuk mengecek sebuah kondisi variabel:
+
+if(kondisi){
+// kondisi terpenuhi
+} else {
+// kondisi lainnya
+}
+
+if(kondisi 1){
+// kondisi 1 terpenuhi
+} else if(kondisi 2){
+// kondisi 2 terpenuhi
+} else {
+// kondisi lainnya
+}
+
+**Warning**
+Hati-hati terhadap perbandingan antara ARRAY dan OBJEK
+
+contoh:
+
+const person1 = {name: 'MAX'}
+const person2 = {name: 'MAX'}
+person1 === person2 // akan selalu menghasilkan nilai false, meski struktur objeknya sama
+ini dikarenakan terkait penyimpanan data yang digunakan (variabel)
+
+const person3 = person1 // menghasilkan nilai true
+
+Menggabungkan kondisi pada percabangan:
+
+AND operator = &&
+OR operator = ||
+
+Prioritas Operator Logik
 
 ## 03. Perkenalan JavaScript ES6 dan versi ES5 (TBA)
 
