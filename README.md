@@ -198,7 +198,35 @@ Menggabungkan kondisi pada percabangan:
 AND operator = &&
 OR operator = ||
 
-Prioritas Operator Logik
+Prioritas Operator Logik:
+`https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence`
+
+Nilai Falsy & Truthy
+
+Pada JavaScript jika mengecek sebuah variabel itu tidak kosong seperti 1,2,-1/"string"/{objek}, [array]; maka menghasilkan nilai truthy atu TRUE, sedangkan apabila nilai variabel tersebut 0/string kosong ("")/null/undefined/NaN maka menghasilkan nilai falsy atau FALSE
+
+Ekspresi Kondisi / Ternary Operator
+
+pernyataan if mengembalikan nilai yang tidak ada;
+
+contohnya kita tidak bisa menggunakan hasil kembali dari pernyataan IF pada sebuah variabel;
+
+`const userName = if(isLogin) { return 'Dzaky' } else { return null }`
+
+maka untuk mengatasi hal tersebut kita bisa menggunakan Ternary Operator:
+
+`const userName = isLogin ? 'Dzaky' : null`
+
+Teori "Statement" dan :"Expression"
+
+*Statement = Sesuatu yang digunakan di sebelah kanan dari tanda persamaan
+*Expression = Sesuatu yang menghasilkan nilai dan dapat disimpan dalam sebuah variabel atau dikembalikan
+
+Trik Boolean dengan Logical Operators
+
+- Double Not Operator (!!) digunakan untuk mengembalikan nilai dalam bentuk boolean (false/true) = !!"" or !!1 (false, true)
+- Or Operator (||) untuk menyimpan nilai default jika nilai yang diinginkan tidak ada = (const name = fullName || 'Dzaky')
+- And Operator (&&) untuk menyimpan nilai default jika perbandingannya bernilai true = (const name = isLoggedIn && 'Dzaky') jika isLoggedIn tidak terdefenisi maka mengembalikan nilai false
 
 ## 03. Perkenalan JavaScript ES6 dan versi ES5 (TBA)
 
